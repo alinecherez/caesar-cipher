@@ -34,4 +34,4 @@ Essa aplicação destina-se a qualquer pessoa que deseje enviar a alguém uma me
 que ninguém além do destinatário saiba o seu conteúdo. 
 
 ## Diagrama de blocos
-<img id="diagrama" src="Diagrama-Cipher.png" alt="Diagrama de blocos">
+<img id="diagrama" src="img/Diagrama-Cipher.png" alt="Diagrama de blocos">
