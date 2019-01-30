@@ -1,0 +1,13 @@
+label, input {
+    display: block;
+}
+input[type=submit]{
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background: whitesmoke; 
+}
+#exemplo {
+    border: 5px;
+    border-color: black;
+}

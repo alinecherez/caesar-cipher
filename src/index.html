@@ -6,8 +6,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="escrita"></div>
+        <h1>Codifique e descodifique mensagens com a <br><u>Cifra de Cesar</u></h1>
+          <p>Se você precisa enviar uma mensagem secreta para alguém e não quer outras pessoas além do destinatário saibam o conteúdo, a Cifra de César é uma opção.</p>
+          <p>Nomeada em homenagem a Júlio César, que usava o método para se comunicar com os seus generais, o processo de criptografia troca as letras da mensagem por outras letras do alfabeto realizando um deslocamento fixo na posição de cada letra.</p>
+          <p>Uma vez escolhido o valor do deslocamento, todas as letras passam e representar outra de acordo com o valor escolhido.</p>
+          <p id=exemplo>Por exemplo:<br>
+             Valor do deslocamento: 3 <br>
+             A = D | B = E | C = F e assim por diante.</p>
+          <p><strong>Crie ou descodifique a sua mensagem utilizando os campos abaixo:</strong></p>
+    </div>
+
+    <form id = msgCifrar action="" method="POST">
+      <label for="mensagem">Digite a sua mensagem:</label> 
+      <input id="mensagem" type="text" placeholder="Mensagem" name="mensagem"/>
+    
+      <label for="offset">Quantos caracteres você deseja deslocar?</label> 
+      <input id="offset" type="text" placeholder="Digite um número" name="offset"/>
+     
+      <input id="botaoCodifica" value="Codificar"/>
+      
+      <input id="botaoDecodifica" value="Decodificar"/>
+
+      <p id="mensagemCodificada"></p>
+    </form>    
+
     <script src="cipher.js"></script>
-    <script src="index.js"></script>
+    <script src="tests.js"></script>
   </body>
 </html>
