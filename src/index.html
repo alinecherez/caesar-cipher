@@ -3,33 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="escrita"></div>
+    <div id="caixaPrincipal">
         <h1>Codifique e descodifique mensagens com a <br><u>Cifra de Cesar</u></h1>
-          <p>Se você precisa enviar uma mensagem secreta para alguém e não quer outras pessoas além do destinatário saibam o conteúdo, a Cifra de César é uma opção.</p>
-          <p>Nomeada em homenagem a Júlio César, que usava o método para se comunicar com os seus generais, o processo de criptografia troca as letras da mensagem por outras letras do alfabeto realizando um deslocamento fixo na posição de cada letra.</p>
-          <p>Uma vez escolhido o valor do deslocamento, todas as letras passam e representar outra de acordo com o valor escolhido.</p>
-          <p id=exemplo>Por exemplo:<br>
-             Valor do deslocamento: 3 <br>
-             A = D | B = E | C = F e assim por diante.</p>
+          <p>Crie mensagens secretas para conversar com os amigos sem que outras pessoas saibam o conteúdo.</p>
+          <p>Escolha um valor de deslocamento e todas as letras passam e representar outra de acordo com o valor escolhido.</p>
+          <p id="exemplo">Exemplo com deslocamento 3:<br>
+             Mensagem: Eu te amo<br>
+             Código: Hx wh dpr</p>
           <p><strong>Crie ou descodifique a sua mensagem utilizando os campos abaixo:</strong></p>
-    </div>
 
-    <form id = msgCifrar action="" method="POST">
-      <label for="mensagem">Digite a sua mensagem:</label> 
-      <input id="mensagem" type="text" placeholder="Mensagem" name="mensagem"/>
-    
-      <label for="offset">Quantos caracteres você deseja deslocar?</label> 
-      <input id="offset" type="text" placeholder="Digite um número" name="offset"/>
-     
-      <input id="botaoCodifica" value="Codificar"/>
+      <form action="" method="POST">
+        <label for="mensagem">Digite a sua mensagem:</label> 
+        <input id="mensagem" class="caixaEntrada" type="text" placeholder="Mensagem" name="mensagem"/>
+        <label for="offset">Quantos caracteres você deseja deslocar?</label> 
+        <input id="offset" class="caixaEntrada" type="number" placeholder="Número" name="offset" value="3" min="0"/>
+        <input id="botaoCodifica" class="meuBotao" value="Codificar"/>
+        <input id="botaoDecodifica" class="meuBotao" value="Decodificar"/>
+      </form>
       
-      <input id="botaoDecodifica" value="Decodificar"/>
-
+      <p id="textoMensagem"></p>
       <p id="mensagemCodificada"></p>
-    </form>    
+
+    </div>    
 
     <script src="cipher.js"></script>
     <script src="tests.js"></script>

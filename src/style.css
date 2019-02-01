@@ -1,13 +1,73 @@
 label, input {
     display: block;
 }
-input[type=submit]{
-    cursor: pointer;
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px; 
+    background-image: url("../img/background.png");
 }
-input[type=submit]:hover{
-    background: whitesmoke; 
+#caixaPrincipal {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;   
+    margin-bottom: auto;
+    text-align: center;
+    background-color: #e4e4e4;
+    padding: 10px 20px;
+    border-radius:6px;
 }
-#exemplo {
-    border: 5px;
-    border-color: black;
+#caixaPrincipal h1 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+#caixaPrincipal input {
+    margin-left: auto;
+    margin-right: auto;
+}
+.caixaEntrada {
+    margin: 10px;
+    padding: 5px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    border-radius:6px;
+}
+#mensagem {
+    width: 350px;   
+}
+#offset {
+    width: 50px;
+}
+#mensagemCodificada {
+    padding: 10px;
+    margin: 10px;
+    background-color: #FFFFFF;
+    font-size: 25px;
+    display: none;
+    border-radius:6px;
+    font-weight: bold;
+}
+.meuBotao {
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 10px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+    width: 90px;
+    text-align: center;
+}
+.meuBotao:hover {
+	background-color:#f6f6f6;
+}
+.meuBotao:active {
+	position:relative;
+	top:1px;
 }
