@@ -11,23 +11,23 @@ para enviarmos mensagens secretas um para o outro.
 Para enviar as mensagens em código, desenvolvi a aplicação com base na Cifra de César,
 um dos primeiros tipos de criptografias do mundo. Essa cifra troca as letras da ordem
 do alfabeto normal levando em consideração um valor de deslocamento fixo. A mensagem
-original é substituída pelas letras equivalentes aplicando o deslocamento.
+original é substituída pelas letras equivalentes aplicando um valor de deslocamento.
 
-Essa criptografia recebe o nome do imperador Júlio César, que deslocava 3 posições
+Essa criptografia recebe o nome do imperador Júlio César, que deslocava em 3 posições
 as letras do alfabeto para enviar mensagens aos seus generais em guerra.
 
-Exemplo utilizando um deslocamento de 4 posições:
+Exemplo utilizando um deslocamento de 3 posições:
 - Mensagem original: AMARELO
-- Mensagem codificada: EQEVIPS
+- Mensagem codificada: DPDUHOR
 
 ## Objetivo
 
-O objetivo principal dessa aplicação é criar mensagens em código com letras maiúsculas 
-e minúsculas a partir de um valor de deslocamento determinado pelo usuário.
-Além da codificação, o usuário pode também inserir a mensagem codificada para ser decodificada
-utilizando o mesmo deslocamento realizado para cifrar a mensagem.
+O objetivo principal dessa aplicação é criar mensagens em código a partir de um valor de 
+deslocamento determinado pelo usuário. Além da codificação, o usuário pode também inserir 
+a mensagem codificada para ser decodificada utilizando o mesmo deslocamento realizado para
+cifrar a mensagem.
 
-O programa não funciona utilizando caracteres especiais ou com deslocamento negativo.
+O programa também funciona utilizando caracteres especiais ou com deslocamento negativo.
 
 ## Definição do usuário
 Essa aplicação destina-se a qualquer pessoa que deseje enviar a alguém uma mensagem em código para
