@@ -16,6 +16,11 @@ function cipherEncode() {
 function cifra1 (msgNormal, deslocamento) {
   let codLetra = "";
   let msgCodificada = "";
+
+  if(deslocamento < 0){
+    deslocamento = 26 + (deslocamento%26);
+  }
+  
   for (let i = 0; i < msgNormal.length; i++) {
     if (msgNormal.charCodeAt(i) >= 65 && msgNormal.charCodeAt(i) <=90){
       codLetra = (((msgNormal.charCodeAt(i)-65)+deslocamento) %26) + 65;
@@ -23,13 +28,15 @@ function cifra1 (msgNormal, deslocamento) {
     else if (msgNormal.charCodeAt(i) >= 97 && msgNormal.charCodeAt(i) <=122){
       codLetra = (((msgNormal.charCodeAt(i)-97)+deslocamento) %26) + 97;
     }
-    else if (msgNormal.charCodeAt(i) >= 32){
-      codLetra = 32;
+    else if (msgNormal.charCodeAt(i) >= 0 && msgNormal.charCodeAt(i) <= 255){
+      codLetra = msgNormal.charCodeAt(i);
     }
     msgCodificada += String.fromCharCode(codLetra);
    }
    return msgCodificada;
 }
+
+
 
 //******
 
@@ -53,8 +60,8 @@ function cifra2 (msgNormal, deslocamento) {
     else if (msgNormal.charCodeAt(i) >= 97 && msgNormal.charCodeAt(i) <=122){
       codLetra = (((((msgNormal.charCodeAt(i)-97)-deslocamento)%26)+26) %26) + 97;
     }
-    else if (msgNormal.charCodeAt(i) === 32){
-      codLetra = 32;
+    else if (msgNormal.charCodeAt(i) >= 0 && msgNormal.charCodeAt(i) <= 255){
+      codLetra = msgNormal.charCodeAt(i);
     }
     msgCodificada += String.fromCharCode(codLetra);
    }
